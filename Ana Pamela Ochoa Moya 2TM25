@@ -1,0 +1,56 @@
+#include <iostream>
+#define PI 3.1416
+#include<cmath>
+using namespace std;
+int gradarad (float gra)
+{ 
+float rad=0;
+rad=(gra*PI)/180;
+std::cout<< rad;
+return 0;
+}
+
+int radagrad (float rad){
+	float grad=0;
+	grad=(rad*180)/PI;
+	cout<<grad;
+	
+	return 0;
+}
+
+int distp1p2(float x1=0, float y1=0, float z1=0, float x2=0, float y2=0, float z2=0){
+float p1p2=sqrt(((x2-x1)(x2-x1))+((y2-y1)(y2-y1))+((z2-z1)*(z2-z1)));
+cout<<p1p2;
+ 
+ return 0; 
+}
+
+int rectapol (float x=0, float y=0){
+	float r=0;
+	float teta=0;
+	r=sqrt((x*x)+(y*y));
+	teta=atan(y/x);
+	cout<<"("<<r<<","<<teta<<")";
+	
+	return 0; 
+}
+
+int esfacil (float r=0, float teta=0, float phy=0){
+	float x=0;
+	float y=0;
+	float z=0;
+	x=r*sin(phy)*cos(teta);
+	y=r*sin(phy)*sin(teta);
+	z=r*cos(phy);
+	cout<<x<<" , "<<y<<" , "<<z<<endl; 
+	
+	return 0;
+}
+
+int upuntov (float U1=0, float U2=0, float U3=0, float V1=0, float V2=0, float V3=0){
+	float w; 
+	w=(U1)(V1)+(U2)(V2)+(U3)(V3);
+	cout<<w;
+	
+	return 0;
+}
